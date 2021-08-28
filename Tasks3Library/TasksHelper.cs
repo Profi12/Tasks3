@@ -68,5 +68,18 @@
 
             return b;
         }
+
+        public static int Task5(int a, int b)
+        {
+            int sum = 0;
+            for (int i = a; i <= b; i++)
+            {
+                if (i % 7 == 0)
+                {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
     }
 }
