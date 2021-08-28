@@ -94,5 +94,21 @@
 
             return n % 2 == 1 ? a : b;
         }
+
+        public static int Task7(int a, int b)
+        {
+            while (a != b)
+            {
+                if (a > b)
+                {
+                    a -= b;
+                }
+                else
+                {
+                    b -= a;
+                }
+            }
+            return a;
+        }
     }
 }

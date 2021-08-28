@@ -1,4 +1,5 @@
 ﻿using System;
+using Tasks3Library;
 
 namespace Task3_7
 {
@@ -9,18 +10,7 @@ namespace Task3_7
             int a = Convert.ToInt32(Console.ReadLine());
             int b = Convert.ToInt32(Console.ReadLine());
 
-            while (a != b)
-            {
-                if (a > b)
-                {
-                    a -= b;
-                }
-                else
-                {
-                    b -= a;
-                }
-            }
-            Console.WriteLine(a);
+            Console.WriteLine(TasksHelper.Task7(a, b));
         }
     }
 }
