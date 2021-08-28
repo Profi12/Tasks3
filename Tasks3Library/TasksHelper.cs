@@ -81,5 +81,18 @@
             }
             return sum;
         }
+
+        public static int Task6(int n)
+        {
+            int a = 1;
+            int b = 1;
+            for (int i = 2; i < n; i += 2)
+            {
+                a += b;
+                b += a;
+            }
+
+            return n % 2 == 1 ? a : b;
+        }
     }
 }
