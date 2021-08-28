@@ -33,5 +33,24 @@
 
             return array;
         }
+
+        public static int Task3(int a)
+        {
+            int step = 3;
+            int count = 1;
+            for (int i = 2; i < a;
+                i += step,
+                step += 2,
+                count++) ;
+
+            if (count * count < a)
+            {
+               return count;
+            }
+            else
+            {
+                return count - 1;
+            }
+        }
     }
 }
