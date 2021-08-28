@@ -45,12 +45,28 @@
 
             if (count * count < a)
             {
-               return count;
+                return count;
             }
             else
             {
                 return count - 1;
             }
+        }
+
+        public static int Task4(int a)
+        {
+            int b = a / 2;
+
+            for (int i = b; i >= 1; i--)
+            {
+                if (a % i == 0)
+                {
+                    b = i;
+                    break;
+                }
+            }
+
+            return b;
         }
     }
 }
