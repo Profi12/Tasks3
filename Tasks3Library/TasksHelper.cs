@@ -131,5 +131,22 @@
             }
             return middle;
         }
+
+        public static int Task9(int a)
+        {
+            int b = a % 10;
+            int n = 0;
+
+            while (a != 0)
+            {
+                if (b % 2 == 1)
+                {
+                    n++;
+                }
+                a = a / 10;
+                b = a % 10;
+            }
+            return n;
+        }
     }
 }
