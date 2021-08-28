@@ -110,5 +110,26 @@
             }
             return a;
         }
+
+        public static int Task8(int y)
+        {
+            int left = 0;
+            int right = y;
+            int middle = right;
+
+            while (y != middle * middle * middle)
+            {
+                if (middle * middle * middle > y)
+                {
+                    right = middle;
+                }
+                else
+                {
+                    left = middle;
+                }
+                middle = (left + right) / 2;
+            }
+            return middle;
+        }
     }
 }
