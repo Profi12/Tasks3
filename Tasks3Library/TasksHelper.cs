@@ -162,5 +162,54 @@
 
             return result;
         }
+
+        public static int[] Task11(int n)
+        {
+            int count = 0;
+            for (int i = 1; i <= n; ++i)
+            {
+                (int chet, int nechet) = GetNumberParts(i);
+
+                if (chet > nechet)
+                {
+                    ++count;
+                }
+            }
+
+            int[] arr = new int[count];
+            for (int num = 1, i = 0; num <= n; ++num)
+            {
+                (int chet, int nechet) = GetNumberParts(num);
+
+                if (chet > nechet)
+                {
+                    arr[i++] = num;
+                }
+            }
+
+            return arr;
+        }
+
+        private static (int chet, int nechet) GetNumberParts(int num)
+        {
+            int chet = 0;
+            int nechet = 0;
+            while (num != 0)
+            {
+                int b = num % 10;
+                if (b % 2 == 0)
+                {
+                    chet += b;
+                }
+                else
+                {
+                    nechet += b;
+                }
+
+                num /= 10;
+            }
+
+            return (chet, nechet);
+        }
     }
 }
