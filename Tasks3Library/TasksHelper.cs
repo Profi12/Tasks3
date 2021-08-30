@@ -148,5 +148,19 @@
             }
             return n;
         }
+
+        public static int Task10(int a)
+        {
+            int result = 0;
+
+            while (a != 0)
+            {
+                result *= 10;
+                result += a % 10;
+                a /= 10;
+            }
+
+            return result;
+        }
     }
 }
