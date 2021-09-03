@@ -190,6 +190,32 @@
             return arr;
         }
 
+        public static bool Task12(int a, int b)
+        {
+            int aCopy = a;
+            bool wasFound = false;
+            while (aCopy != 0)
+            {
+                int aPart = aCopy % 10;
+                int bCopy = b;
+                while (bCopy != 0)
+                {
+                    int bPart = bCopy % 10;
+                    if (aPart == bPart)
+                    {
+                        wasFound = true;
+                        break;
+                    }
+
+                    bCopy /= 10;
+                }
+
+                aCopy /= 10;
+            }
+
+            return wasFound;
+        }
+
         private static (int chet, int nechet) GetNumberParts(int num)
         {
             int chet = 0;
