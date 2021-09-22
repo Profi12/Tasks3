@@ -1,16 +1,22 @@
-﻿namespace Tasks3Library
+﻿using System;
+
+namespace Tasks3Library
 {
     public class TasksHelper
     {
-        public static int Pow(int a, int b)
+        public static double Pow(int a, int b)
         {
-            int s = a;
+            double s = a;
+            if (b < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
             if (b == 0)
             {
                 s = 1;
             }
 
-            for (int i = 1; i < b; i++)
+            for (int i = 1; i < b; i++) 
             {
                 s = s * a;
             }
